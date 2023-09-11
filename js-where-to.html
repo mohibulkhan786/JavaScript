@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myFunction() {
+            document.getElementById("head").innerHTML = "Paragraph changed.";
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+    <p>JavaScript Functions and Events<br>
+        A JavaScript function is a block of JavaScript code, that can be executed when "called" for.<br>
+        For example, a function can be called when an event occurs, like when the user clicks a button.<br>
+        You will learn much more about functions and events in later chapters.<br>
+        JavaScript in head or body<br>
+        You can place any number of scripts in an HTML document.<br>
+        Scripts can be placed in the body, or in the head section of an HTML page, or in both.<br>
+        JavaScript in head<br>
+        In this example, a JavaScript function is placed in the
+
+        <head> section of an HTML page.<br>
+            The function is invoked (called) when a button is clicked:
+    </p>
+
+
+    <h2>Demo JavaScript in Head</h2>
+    <p id="head">A Paragraph.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+
+
+    <hr>
+
+    <p>In HTML, JavaScript code is inserted between script tags.</p>
+    <p id="script"></p>
+
+    <script>
+        document.getElementById("script").innerHTML = "My First JavaScript";
+    </script>
+
+
+    <hr>
+
+</body>
+
+</html>

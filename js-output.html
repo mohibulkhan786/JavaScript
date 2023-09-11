@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <p>JavaScript Display Possibilities<br />
+        JavaScript can "display" data in different ways:<br />
+
+        Writing into an HTML element, using innerHTML.<br />
+        Writing into the HTML output using document.write().<br />
+        Writing into an alert box, using window.alert().<br />
+        Writing into the browser console, using console.log().<br />
+        Using innerHTML<br />
+        To access an HTML element, JavaScript can use the document.getElementById(id) method.<br />
+
+        The id attribute defines the HTML element. The innerHTML property defines the HTML content:</p>
+
+    <p id="inner"></p>
+    <script>
+        document.getElementById("inner").innerHTML = 5 + 6;
+    </script>
+
+    <hr>
+    <p>For testing purposes, it is convenient to use document.write():</p>
+    <script>  document.write(5 + 6);  </script>
+    <br>
+    <button type="button" onclick="document.write(5 + 6)">Try it</button>
+
+
+    <br>
+    <p>Using window.alert()</p>
+    <!-- <script>    window.alert(5 + 6);    </script> -->
+
+    <br>
+    <!-- <script>    alert(5 + 6);   </script> -->
+
+    <br>
+    <script>    console.log(5 + 6);    </script>
+
+
+    <hr>
+
+
+    <h2>The window.print() Method</h2>
+
+    <p>Click the button to print the current page.</p>
+
+    <button onclick="window.print()">Print this page</button>
+
+</body>
+
+</html>

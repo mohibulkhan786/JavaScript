@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="demo"></p>
+
+
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+        let text = "";
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        let text2 = "";
+
+        for (let i = 0; i < 5; i++) {
+            text2 += "The number is " + i + "<br>";
+        }
+
+        document.getElementById("demo2").innerHTML = text2;
+    </script>
+
+    <!-- <p id="demo3"></p>
+<script>
+    const cars2 = ["BMW", "Volvo", "Saab", "Ford"];
+    let i, len, text3;
+    for (i = 0, len = cars2.length, text3 = ""; i < len; i++) {
+      text += cars2[i] + "<br>";
+    }
+    document.getElementById("demo3").innerHTML = text3;
+    </script> -->
+
+
+    <!-- <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let i = 2;
+        let len = cars.length;
+        let text = "";
+        
+        for (; i < len; i++) {
+          text += cars[i] + "<br>";
+        }
+        
+        document.getElementById("demo").innerHTML = text; // saab ford
+        </script>
+         -->
+
+    <!-- <script>
+        var i = 5;
+        for (var i = 0; i < 10; i++) {
+            // some statements
+        }
+        document.getElementById("demo").innerHTML = i; // 10
+    </script> -->
+
+    <!-- <script>
+        let i = 5;
+        for (let i = 0; i < 10; i++) {
+            // some statements
+        }
+        document.getElementById("demo").innerHTML = i;  // 5
+    </script> -->
+
+    <p>FOR IN LOOP</p>
+
+    <!-- <script>
+        const person = {fname:"John", lname:"Doe", age:25}; 
+        
+        let txt = "";
+        for (let x in person) {
+          txt += person[x] + " ";
+        }
+        
+        document.getElementById("demo").innerHTML = txt;
+        </script> -->
+
+    <!-- <script>
+    const numbers = [45, 4, 9, 16, 25];
+    
+    let txt = "";
+    for (let x in numbers) {
+      txt += numbers[x] + "<br>"; 
+    }
+    
+    document.getElementById("demo").innerHTML = txt;
+    </script> -->
+
+    <!-- <script>
+        const numbers = [45, 4, 9, 16, 25];
+        
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = txt;
+        
+        function myFunction(value) {
+          txt += value + "<br>"; 
+        }
+        </script> -->
+
+    <p>The For Of Loop</p>
+
+    <!-- <script>
+            const cars = ["BMW", "Volvo", "Mini"];
+            
+            let text = "";
+            for (let x of cars) {
+              text += x + "<br>";
+            }
+            
+            document.getElementById("demo").innerHTML = text;
+            </script> -->
+
+
+    <!-- <script>
+                let language = "JavaScript";
+                
+                let text = "";
+                for (let x of language) {
+                  text += x ;
+                }
+                
+                document.getElementById("demo").innerHTML = text;
+                </script> -->
+
+    <p>The While Loop</p>
+
+    <!-- <script>
+                    let text = "";
+                    let i = 0;
+                    while (i < 10) {
+                      text += "<br>The number is " + i;
+                      i++;
+                    }
+                    document.getElementById("demo").innerHTML = text;
+                    </script> -->
+
+
+    <!-- <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+        let i = 0;
+        let text = "";
+        while (cars[i]) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click to view Current Time Zone</p>
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p id="demo"></p>
+
+
+
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi</option>
+  <option value="BMW">BMW</option>
+  <option value="Mercedes">Mercedes</option>
+  <option value="Volvo">Volvo</option>
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo2").innerHTML = "You selected: " + x;
+}
+</script>
+
+<p>Click to trigger a function that will output "Hello World":</p>
+
+<button onclick="myFunction2()">Click me</button>
+
+<p id="demo3"></p>
+
+<script>
+function myFunction2() {
+  document.getElementById("demo3").innerHTML = "Hello World";
+}
+</script>
+
+
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+    The mouseDown() function sets the color of this text to red.
+    The mouseUp() function sets the color of this text to blue.
+    </p>
+    
+    <script>
+    function mouseDown() {
+      document.getElementById("myP").style.color = "red";
+    }
+    
+    function mouseUp() {
+      document.getElementById("myP").style.color = "blue";
+    }
+    </script>
+
+<h2>The onprogress Event</h2>
+
+<video controls onprogress="myFunction()">
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Downloading video.";
+}
+</script>
+
+
+<h1 id="myH1"></h1>
+<div id="myDIV"></div>
+
+<p><strong>Note:</strong> Server-Sent Events are not supported in Internet Explorer.</p>
+
+<script>
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("/html/demo_sse.php");
+  source.onopen = function() {
+    document.getElementById("myH1").innerHTML = "Getting server updates";
+  };
+  
+  source.onmessage = function(event) {
+    document.getElementById("myDIV").innerHTML += event.data + "<br>";
+  };
+
+} else {
+  document.getElementById("myDIV").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+
+</body>
+</html>
