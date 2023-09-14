@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h2>JavaScript if</h2>
+  <h2>JavaScript if</h2>
 
 
 
-<p id="demo">Good Evening!</p>
+  <p id="demo">Good Evening!</p>
 
-<!-- <script>
+  <!-- <script>
 if (new Date().getHours() < 18) {
   document.getElementById("demo").innerHTML = "Good day!";
 }
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   const hour = new Date().getHours(); 
   let greeting;
   
@@ -39,54 +40,55 @@ if (new Date().getHours() < 18) {
       greeting = "Good evening";
     }
     document.getElementById("demo").innerHTML = greeting;
-    </script>
-
-
-
-
-
-<script>
-  let day;
-  switch (new Date().getDay()) {  // The getDay() method returns the weekday as a number between 0 and 6.
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-      day = "Monday";
-      break;
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    case  6:
-      day = "Saturday";
-  }
-  document.getElementById("demo").innerHTML = "Today is " + day;
   </script>
 
 
-<script>
-  let text;
-  switch (new Date().getDay()) {
-    case 6:
-      text = "Today is Saturday";
-      break;
-    case 0:
-      text = "Today is Sunday";
-      break;
-    default:
-      text = "Looking forward to the Weekend";
-  }
-  document.getElementById("demo").innerHTML = text;
+
+
+
+  <script>
+    let day;
+    switch (new Date().getDay()) {  // The getDay() method returns the weekday as a number between 0 and 6.
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+    }
+    document.getElementById("demo").innerHTML = "Today is " + day;
+  </script>
+
+
+  <script>
+    let text;
+    switch (new Date().getDay()) {
+      case 6:
+        text = "Today is Saturday";
+        break;
+      case 0:
+        text = "Today is Sunday";
+        break;
+      default:
+        text = "Looking forward to the Weekend";
+    }
+    document.getElementById("demo").innerHTML = text;
   </script>
 
 </body>
+
 </html>

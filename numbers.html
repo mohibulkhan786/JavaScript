@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Numbers</h1>
+    <h2>Integer Precision</h2>
+
+    <p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let x = 999999999999999;
+        let y = 9999999999999999;
+        document.getElementById("demo").innerHTML = x + "<br>" + y;
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        let xx = 10;
+        let yy = 20;
+        let zz = "30";
+        let result = xx + yy + zz;
+        document.getElementById("demo2").innerHTML = result;
+    </script>
+
+    <p id="demo3"></p>
+
+    <script>
+        let xxx = 9007199254740995n;
+        let yyy = 9007199254740995n;
+        let zzz = xxx * yyy;
+
+        document.getElementById("demo3").innerHTML = zzz; 
+    </script>
+
+
+    <p id="demo4"></p>
+
+    <script>
+        document.getElementById("demo4").innerHTML =
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number("10") + "<br>" +
+            Number("  10") + "<br>" +
+            Number("10  ") + "<br>" +
+            Number(" 10  ") + "<br>" +
+            Number("10.33") + "<br>" +
+            Number("10,33") + "<br>" +
+            Number("10 33") + "<br>" +
+            Number("John");
+    </script>
+
+    <p id="demo5"></p>
+
+    <script>
+        let w = new Date("2017-09-30");
+        document.getElementById("demo5").innerHTML = Number(w); 
+    </script>
+
+
+    <p id="demo6"></p>
+
+    <script>
+        document.getElementById("demo6").innerHTML =
+            parseInt("-10") + "<br>" +
+            parseInt("-10.33") + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 years") + "<br>" +
+            parseInt("years 10");  
+    </script>
+
+
+    <p id="demo7"></p>
+
+    <script>
+        document.getElementById("demo7").innerHTML =
+            Number.isInteger(10) + "<br>" + Number.isInteger(10.5);
+    </script>
+
+
+</body>
+
+</html>

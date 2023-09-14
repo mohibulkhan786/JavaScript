@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The JavaScript <i>this</i> Keyword</h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b> is a method of the person object.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "Arm",
+  lastName: "khan",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+
+<h1>The JavaScript <i>this</i> Keyword</h1>
+
+<button onclick="this.style.display='none'">Click to Remove Me!</button>
+
+<p>In this example <strong>this</strong> refers to person2, even if it is a method of person1:</p>
+
+<p id="demo2"></p>
+
+<script>
+const person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person2 = {
+  firstName:"Arm",
+  lastName: "khan",
+}
+
+let x = person1.fullName.call(person2); 
+document.getElementById("demo2").innerHTML = x; 
+</script>
+
+
+
+<p id="demo3"></p>
+
+<script>
+const person3 = {
+  firstName:"Arm",
+  lastName: "khan",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Amreen",
+  lastName: "khan",
+}
+
+let fullName = person3.fullName.bind(member);
+
+document.getElementById("demo3").innerHTML = fullName();
+</script>
+
+
+</body>
+</html>

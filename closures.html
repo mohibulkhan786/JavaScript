@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>A function can access variables defined inside the function:</p>
+
+<p id="demo"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  let a = 4;
+  document.getElementById("demo").innerHTML = a * a;
+}
+</script>
+
+
+<p>A function can access variables defined outside the function:</p>
+<p id="demo2"></p>
+<script>
+let ab = 4;
+myFunction();
+
+function myFunction() {
+  document.getElementById("demo2").innerHTML = ab * ab;
+} 
+</script>
+
+
+<p>Counting with a global variable.</p>
+<p id="demo3"></p>
+
+<script>
+// Initiate counter
+let counter = 0;
+
+// Function to increment counter
+function add() {
+  counter += 1;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+
+// The counter should now be 3
+document.getElementById("demo3").innerHTML = "The counter is: " + counter;
+</script>
+
+
+<p>Counting with a local variable.</p>
+<button type="button" onclick="myFunction()">Count!</button>
+<p id="demo4">0</p>
+
+<script>
+const add2 = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter;}
+})();
+
+function myFunction(){
+  document.getElementById("demo4").innerHTML = add2();
+}
+</script>
+
+
+</body>
+</html>

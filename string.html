@@ -1,24 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h1>JavaScript Strings</h1>
-<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+    <h1>JavaScript Strings</h1>
+    <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
 
-<p id="demo"></p>
+    <p id="demo"></p>
 
-<script>
-let answer1 = "It's alright";
-let answer2 = "He is called 'Johnny'";
-let answer3 = 'He is called "Johnny"'; 
-let carName1 = "Volvo XC60"; // Double quotes
-let carName2 = 'Volvo XC60'; // Single quotes
+    <script>
+        let answer1 = "It's alright";
+        let answer2 = "He is called 'Johnny'";
+        let answer3 = 'He is called "Johnny"';
+        let carName1 = "Volvo XC60"; // Double quotes
+        let carName2 = 'Volvo XC60'; // Single quotes
 
-document.getElementById("demo").innerHTML =
-answer1 + "<br>" + answer2 + "<br>" + answer3 + "<br>" + carName1 + "<br>" + carName2; 
-</script>
+        document.getElementById("demo").innerHTML =
+            answer1 + "<br>" + answer2 + "<br>" + answer3 + "<br>" + carName1 + "<br>" + carName2; 
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo2").innerHTML = text.length; //26
+    </script>
+
+
+    <p id="demo3"></p>
+
+    <script>
+        // x is a string
+        let x = "John";
+
+        // y is an object
+        let y = new String("John");
+
+        document.getElementById("demo3").innerHTML =
+            typeof x + "<br>" + typeof y;
+    </script>
+
+    <p id="demo4"></p>
+
+    <script>
+        let xx = "John";        // x is a string
+        let yy = new String("John");  // y is an object
+        document.getElementById("demo4").innerHTML = (x === y); // false
+    </script>
+
+
+    <p id="demo5"></p>
+
+    <script>
+        let xxx = "John";        // x is a string
+        let yyy = new String("John");  // y is an object
+        document.getElementById("demo5").innerHTML = (x == y); // true
+    </script>
+
+
+    <p id="demo6"></p>
+
+    <script>
+        let text1 = "Hello";
+        let text2 = "World!";
+        let text3 = text1.concat(" ", text2);
+        document.getElementById("demo6").innerHTML = text3;
+    </script>
+
+    <p id="demo7"></p>
+
+    <script>
+        let text5 = "Please locate where 'locate' occurs!";
+        let index = text5.indexOf("locate");
+        document.getElementById("demo7").innerHTML = index; 
+    </script>
+
+
+    <p id="demo8"></p>
+
+    <script>
+        let text6 = "I love cats. Cats are very easy to love. Cats are very popular."
+        const iterator = text.matchAll("Cats");
+
+        document.getElementById("demo8").innerHTML = Array.from(iterator);
+    </script>
 
 </body>
+
 </html>
-
-

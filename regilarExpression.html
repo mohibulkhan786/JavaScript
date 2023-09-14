@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript String Methods</h1>
+<p>Search a string for "W3Schools", and display the position of the match:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "Visit W3Schools!"; 
+let n = text.search("W3Schools");
+document.getElementById("demo").innerHTML = n;
+</script>
+
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo2">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  let text2 = document.getElementById("demo2").innerHTML;
+  document.getElementById("demo2").innerHTML =
+  text2.replace("Microsoft","W3Schools");
+}
+</script>
+
+
+<p>Do a global search for the character "h" in a string:</p>
+<p id="demo3"></p>
+<script>
+let text3 = "Is this all there is?";
+let result = text3.match(/[h]/g);
+document.getElementById("demo3").innerHTML = result;
+</script>
+
+<p>Do a global search for the numbers 1 to 4 in a string:</p>
+<p id="demo4"></p>
+<script>
+let text4 = "123456789";
+let result2 = text4.match(/[1-4]/g);
+document.getElementById("demo").innerHTML = result2;
+</script>
+
+</body>
+</html>
+

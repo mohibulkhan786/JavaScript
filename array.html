@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Arrays</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars;
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        const cars2 = [];
+        cars2[0] = "Saab";
+        cars2[1] = "Volvo";
+        cars2[2] = "BMW";
+        document.getElementById("demo2").innerHTML = cars2;
+    </script>
+
+    <p id="demo3"></p>
+
+    <script>
+        const cars3 = new Array("Saab", "Volvo", "BMW");
+        document.getElementById("demo3").innerHTML = cars3;
+    </script>
+
+    <p id="demo4"></p>
+
+    <script>
+        const cars4 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo4").innerHTML = cars4[0];
+    </script>
+
+    <p id="demo5"></p>
+
+    <script>
+        const cars5 = ["Saab", "Volvo", "BMW"];
+        cars5[0] = "Thar";
+        document.getElementById("demo5").innerHTML = cars5;
+    </script>
+
+
+    <p id="demo6"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo6").innerHTML = fruits.toString();
+    </script>
+
+
+    <p id="demo7"></p>
+
+    <script>
+        const person = ["Arm", "khan", 46];
+        document.getElementById("demo7").innerHTML = person;
+    </script>
+
+    <p id="demo8"></p>
+
+    <script>
+        const person2 = { firstName: "Arm", lastName: "khan", age: 30 };
+        document.getElementById("demo8").innerHTML = "My name is" + " " +
+            person2.firstName + " " + person2.lastName + " " + "And I m " +
+            person2.age + " " + "years old";
+    </script>
+
+    <p id="demo9"></p>
+    <script>
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        let size = fruits2.length;
+        document.getElementById("demo9").innerHTML = size;
+    </script>
+
+    <!--access the first element-->
+
+    <p id="demo10"></p>
+
+    <script>
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo10").innerHTML = fruits3[0]; // Banana
+    </script>
+
+    <!-- Array in Loop-->
+    <p id="demo11"></p>
+    <script>
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits4.length;
+
+        let text2 = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text2 += "<li>" + fruits4[i] + "</li>";
+        }
+        text2 += "</ul>";
+
+        document.getElementById("demo11").innerHTML = text2;
+    </script>
+
+
+    <p id="demo12"></p>
+
+    <script>
+        const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+
+        let text3 = "<ul>";
+        fruits5.forEach(myFunction);
+        text3 += "</ul>";
+
+        document.getElementById("demo12").innerHTML = text3;
+
+        function myFunction(value) {
+            text3 += "<li>" + value + "</li>";
+        } 
+    </script>
+
+    <p id="demo13"></p>
+
+    <script>
+        const fruits6 = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = fruits6;
+
+        function myFunction() {
+            fruits6.push("Lemon");
+            document.getElementById("demo13").innerHTML = fruits6;
+        }
+    </script>
+    <p id="demo14"></p>
+    <script>
+        const ages = [32, 33, 16, 40];
+
+        document.getElementById("demo14").innerHTML = ages.filter(checkAdult);
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

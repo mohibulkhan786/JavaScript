@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The map() Method</h2>
+
+<p>Create a new array by performing a function on each array element:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo").innerHTML = numbers2;
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+</script>
+
+
+<p>The flatMap method</p>
+<p id="demo2"></p>
+
+<script>
+const myArr = [1, 2, 3, 4, 5,6];
+const newArr = myArr.flatMap((x) => x * 2);
+document.getElementById("demo2").innerHTML = newArr;
+</script>
+
+
+<p>The Array filter()</p>
+<p id="demo3"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+document.getElementById("demo3").innerHTML = over18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+
+<p>Array reduce()</p>
+<p id="demo4"></p>
+
+<script>
+const numbers3 = [45, 4, 9, 16, 25];
+let sum = numbers3.reduce(myFunction);
+
+document.getElementById("demo4").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+<p>The Array every()</p>
+<p id="demo5"></p>
+
+<script>
+const numbers4 = [45, 4, 9, 16, 25];
+let allOver18 = numbers4.every(myFunction);
+
+document.getElementById("demo5").innerHTML = "All over 18 is " + allOver18;   // false
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+<p>The Array Some()</p>
+<p id="demo6"></p>
+
+<script>
+const numbers5 = [45, 4, 9, 16, 25];
+let someOver18 = numbers5.some(myFunction);
+
+document.getElementById("demo6").innerHTML = "Some over 18 is " + someOver18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+<p>The Array IndexOf()</p>
+<p id="demo7"></p>
+
+<script>
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.indexOf("Orange") + 1;
+
+document.getElementById("demo7").innerHTML = "Apple is found in position " + position;
+</script>
+
+<p>The Array.from()</p>
+<p id="demo8"></p>
+
+<script>
+const myArr2 = Array.from("ABCDEFG");
+document.getElementById("demo8").innerHTML = myArr2;
+</script>
+
+<p>Array.key()</p>
+<p id="demo9"></p>
+
+<script>
+const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits9.keys();
+
+let text9 = "";
+for (let x of keys) {
+  text9 += x + "<br>";
+}
+
+document.getElementById("demo9").innerHTML = text9;
+</script>
+
+
+<p>The Array entries()</p>
+<p id="demo10"></p>
+
+<script>
+const fruits10 = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits10.entries();
+
+for (let x of f) {
+  document.getElementById("demo10").innerHTML += x + "<br>";
+}
+</script>
+
+<p>Array includes()</p>
+<p id="demo11"></p>
+
+<p>The includes method is not supported in Edge 13 (and earlier versions).</p>
+
+<script>
+const fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo11").innerHTML = fruits11.includes("Mango");
+</script>
+
+
+<p>The "spread" operator spreads elements of iterable objects:</p>
+
+<p id="demo12"></p>
+
+<script>
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+document.getElementById("demo12").innerHTML = year; 
+</script>
+
+
+</body>
+</html>

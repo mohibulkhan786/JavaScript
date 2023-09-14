@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>Declaring a constant array does NOT make the elements unchangeable:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an Array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Change an element:
+cars[0] = "Toyota";
+
+// Add an element:
+cars.push("Audi");
+
+// Display the Array:
+document.getElementById("demo").innerHTML = cars; 
+</script>
+
+
+<p id="demo2"></p>
+
+<script>
+const cars2 = ["Saab", "Volvo", "BMW"];
+// Here cars[0] is "Saab"
+{  
+  const cars2 = ["Toyota", "Volvo", "BMW"]; 
+  // Here cars[0] is "Toyota"
+}
+// Here cars[0] is "Saab"
+document.getElementById("demo").innerHTML = cars2[0];
+</script>
+
+</body>
+</html>

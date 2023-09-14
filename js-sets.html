@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Sets</h2>
+<p>Create a Set from an Array:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// Display set.size
+document.getElementById("demo").innerHTML = letters.size;
+</script>
+
+
+<p id="demo2"></p>
+<script>
+// Create a Set
+const letters2 = new Set();
+
+// Add Values to the Set
+letters2.add("a");
+letters2.add("b");
+letters2.add("c");
+
+// Display set.size
+document.getElementById("demo2").innerHTML = letters2.size;
+</script>
+
+<p>Adding new elements to a Set:</p>
+<p id="demo3"></p>
+<script>
+// Create a new Set
+const letters3 = new Set(["a","b","c"]);
+
+// Add a new Element
+letters3.add("d");
+letters3.add("e");
+
+// Display set.size
+document.getElementById("demo3").innerHTML = letters3.size;
+</script>
+
+
+<p>forEach() calls a function for each element:</p>
+<p id="demo4"></p>
+
+<script>
+// Create a Set
+const letters4 = new Set(["a","b","c"]);
+
+// List all Elements
+let text4 = "";
+letters.forEach (function(value) {
+  text4 += value + "<br>";
+})
+
+document.getElementById("demo").innerHTML = text4;
+</script>
+
+
+</body>
+</html>
