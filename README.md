@@ -1100,11 +1100,14 @@ function myFunction() {
 => Each value can only occur once in a Set.
 
 Method-----------------------------Description
+
 new Set()--------------------------Creates a new Set
+
 const letters = new Set(["a","b","c"]);
 console.log(letters.size); // 3
 
 add()------------------------------Adds a new element to the Set
+
 const letters = new Set();
 // Add Values to the Set
 letters.add("a");
@@ -1117,6 +1120,7 @@ delete()---------------------------Removes an element from a Set
 has()------------------------------Returns true if a value exists in the Set
 
 forEach()--------------------------Invokes a callback for each element in the Set
+
 const letters4 = new Set(["a","b","c"]);
 let text4 = "";
 letters.forEach (function(value) {
@@ -1127,11 +1131,14 @@ console.log(text4); // abc
 
 
 values()---------------------------Returns an iterator with all the values in a Set
+
 const letters = new Set(["a","b","c"]);
 console.log(letters.values());
 
 Property---------------------------Description
+
 size-------------------------------Returns the number of elements in a Set
+
 const letters = new Set(["a","b","c"]);
 console.log(letters.size); // 3
 
@@ -1140,6 +1147,7 @@ console.log(letters.size); // 3
 => A Map holds key-value pairs where the keys can be any datatype.
 
 new Map()---------------------------Creates a new Map
+
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1148,6 +1156,7 @@ const fruits = new Map([
 console.log(fruits.get("apples")); //  500
 
 set()-------------------------------Sets the value for a key in a Map
+
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1156,6 +1165,7 @@ const fruits = new Map([
 fruits.set("apples", 200); // 200
 
 get()-------------------------------Gets the value for a key in a Map
+
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1164,6 +1174,7 @@ const fruits = new Map([
 console.log(fruits.get("apples")); //  500
 
 delete()----------------------------Removes a Map element specified by the key
+
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1173,6 +1184,7 @@ fruits.delete("apples");
 console.log(fruits.size); //  2
 
 has()-------------------------------Returns true if a key exists in a Map
+
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1181,6 +1193,7 @@ const fruits = new Map([
 console.log(fruits.has("apples")); // true
 
 forEach()---------------------------Calls a function for each key/value pair in a Map
+
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1194,6 +1207,7 @@ fruits.forEach (function(value, key) {
  console.log(text);
 
 entries()---------------------------Returns an iterator with the [key, value] pairs in a Map
+
 const fruits6 = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1208,7 +1222,9 @@ for (const x of fruits6.entries()) {
 
 
 Property----------------------------Description
+
 size--------------------------------Returns the number of elements in a Map
+
 const fruits = new Map([
   ["apples", 500],
   ["bananas", 300],
@@ -1487,58 +1503,96 @@ document.getElementById("demo").innerHTML = "Hello World!";
 
 # 1) Finding HTML Elements
 Method------------------------------------Description
+
 document.getElementById(id)---------------Find an element by element id
+
 document.getElementsByTagName(name)-------Find elements by tag name
+
 document.getElementsByClassName(name)-----Find elements by class name
 
 # 2) Changing HTML Elements
 Property----------------------------------Description
+
 element.innerHTML-------------------------new html content	Change the inner HTML of an element
+
 element.attribute-------------------------new value	Change the attribute value of an HTML element
+
 element.style.property--------------------new style	Change the style of an HTML element
 
 Method------------------------------------Description
+
 element.setAttribute(attribute, value)----Change the attribute value of an HTML element
 
 
 # 3) Adding and Deleting Elements
 Method-----------------------------------Description
+
 document.createElement(element)----------Create an HTML element
+
 document.removeChild(element)------------Remove an HTML element
+
 document.appendChild(element)------------Add an HTML element
+
 document.replaceChild(new, old)----------Replace an HTML element
+
 document.write(text)---------------------Write into the HTML output stream
 
 # 4) Adding Events Handlers
 Method--------------------------------------------------------Description
+
 document.getElementById(id).onclick = function(){code}--------Adding event handler code to an onclick event
 
 # 5) Finding HTML Objects
 Property------------------------Description-------------------------------------------- DOM
+
 document.anchors----------------Returns all <a> elements that have a name attribute----	1
+
 document.applets----------------Deprecated---------------------------------------------	1
+
 document.baseURI----------------Returns the absolute base URI of the document----------	3
+
 document.body------------------Returns the <body> element------------------------------	1
+
 document.cookie----------------Returns the document's cookie---------------------------	1
+
 document.doctype---------------Returns the document's doctype--------------------------	3
+
 document.documentElement-------Returns the <html> element------------------------------	3
+
 document.documentMode----------Returns the mode used by the browser--------------------	3
+
 document.documentURI-----------Returns the URI of the document-------------------------	3
+
 document.domain----------------Returns the domain name of the document server---------	1
+
 document.domConfig-------------Obsolete.----------------------------------------------	3
+
 document.embeds----------------Returns all <embed> elements---------------------------	3
+
 document.forms-----------------Returns all <form> elements----------------------------	1
+
 document.head------------------Returns the <head> element-----------------------------  3
+
 document.images----------------Returns all <img> elements-----------------------------	1
+
 document.implementation--------Returns the DOM implementation-------------------------	3
+
 document.inputEncoding---------Returns the document's encoding (character set)--------	3
+
 document.lastModified----------Returns the date and time the document was updated-----	3
+
 document.links-----------------Returns all <a> elements that have a href attribute----	1
+
 document.readyState------------Returns the (loading) status of the document-------------3
+
 document.referrer--------------Returns the URI of the referrer (the linking document)--	1
+
 document.scripts---------------Returns all <script> elements--------------------------	3
+
 document.strictErrorChecking---Returns if error checking is enforced------------------	3
+
 document.title-----------------Returns the <title> element----------------------------	1
+
 document.URL-------------------Returns the complete URL of the document---------------	1
 
 
